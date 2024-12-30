@@ -1,0 +1,16 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Article",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "tags",
+			"value": "URL",
+			"type": "multitext"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{title}}",
+	"path": "_daily_notes\\{{date:YYYY}}/{{date:MMMM}}"
+}

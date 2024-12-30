@@ -1,14 +1,9 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "Wikipedia",
+	"name": "Default",
 	"behavior": "create",
-	"noteContentFormat": "{{selectorHtml:#mw-content-text|remove_html:(\".navbox,.printfooter,.side-box\")|markdown}}",
+	"noteContentFormat": "{{content}}",
 	"properties": [
-		{
-			"name": "category",
-			"value": "[[Clippings]]",
-			"type": "multitext"
-		},
 		{
 			"name": "title",
 			"value": "{{title}}",
@@ -21,8 +16,13 @@
 		},
 		{
 			"name": "author",
-			"value": "[[Wikipedia]]",
+			"value": "{{author|split:\\\", \\\"|wikilink|join}}",
 			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
 		},
 		{
 			"name": "created",
@@ -36,13 +36,31 @@
 		},
 		{
 			"name": "tags",
-			"value": "clippings, wikipedia",
+			"value": "clippings",
 			"type": "multitext"
+		},
+		{
+			"name": "read",
+			"value": "true",
+			"type": "checkbox"
+		},
+		{
+			"name": "rate",
+			"value": "run fabric",
+			"type": "text"
+		},
+		{
+			"name": "score",
+			"value": "run fabric",
+			"type": "text"
+		},
+		{
+			"name": "explanation",
+			"value": "run fabric",
+			"type": "text"
 		}
 	],
-	"triggers": [
-		"/^https:\\/\\/[a-z]{2,3}\\.wikipedia\\.org\\/wiki\\/?$/"
-	],
+	"triggers": [],
 	"noteNameFormat": "{{title}}",
 	"path": "06 - daily/_inbox/clippings"
 }

@@ -2,8 +2,6 @@
 	"schemaVersion": "0.1.0",
 	"name": "arXiv",
 	"behavior": "create",
-	"noteNameFormat": "{{title}}",
-	"path": "Clippings",
 	"noteContentFormat": "{{content}}",
 	"properties": [
 		{
@@ -39,5 +37,7 @@
 	],
 	"triggers": [
 		"https://arxiv.org/html/"
-	]
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "06 - daily/_inbox/clippings"
 }

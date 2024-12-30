@@ -1,0 +1,21 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Article",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "topics",
+			"value": "[[{{title}}]]",
+			"type": "text"
+		},
+		{
+			"name": "read",
+			"value": "0",
+			"type": "checkbox"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{title}}",
+	"path": "06 - daily/_inbox/clippings"
+}

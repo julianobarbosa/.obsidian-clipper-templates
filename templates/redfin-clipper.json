@@ -2,8 +2,6 @@
 	"schemaVersion": "0.1.0",
 	"name": "Redfin",
 	"behavior": "create",
-	"noteNameFormat": "{{meta:name:twitter:text:street_address}}, {{meta:name:twitter:text:city}}",
-	"path": "Clippings",
 	"noteContentFormat": "",
 	"properties": [
 		{
@@ -69,5 +67,7 @@
 	],
 	"triggers": [
 		"https://www.redfin.com/"
-	]
+	],
+	"noteNameFormat": "{{meta:name:twitter:text:street_address}}, {{meta:name:twitter:text:city}}",
+	"path": "06 - daily/_inbox/clippings"
 }

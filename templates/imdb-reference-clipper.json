@@ -2,8 +2,6 @@
 	"schemaVersion": "0.1.0",
 	"name": "IMDB reference",
 	"behavior": "create",
-	"noteNameFormat": "{{meta:name:title|split:\" - IMDb\"|slice:0,1}}",
-	"path": "References",
 	"noteContentFormat": "",
 	"properties": [
 		{
@@ -39,7 +37,7 @@
 		{
 			"name": "length",
 			"value": "",
-			"type": "text"
+			"type": "number"
 		},
 		{
 			"name": "year",
@@ -49,7 +47,7 @@
 		{
 			"name": "rating",
 			"value": "",
-			"type": "text"
+			"type": "number"
 		},
 		{
 			"name": "scoreImdb",
@@ -74,5 +72,7 @@
 	],
 	"triggers": [
 		"/^https:\\/\\/www\\.imdb\\.com\\/title\\/tt\\d+\\/reference\\/?$/"
-	]
+	],
+	"noteNameFormat": "{{meta:name:title|split:\" - IMDb\"|slice:0,1}}",
+	"path": "06 - daily/_inbox/clippings"
 }

@@ -2,8 +2,6 @@
 	"schemaVersion": "0.1.0",
 	"name": "Goodreads",
 	"behavior": "create",
-	"noteNameFormat": "{{selector:.BookPageTitleSection__title h1}}",
-	"path": "References",
 	"noteContentFormat": "{{selector:.BookPageMetadataSection__description}}",
 	"properties": [
 		{
@@ -69,5 +67,7 @@
 	],
 	"triggers": [
 		"https://www.goodreads.com/book/"
-	]
+	],
+	"noteNameFormat": "{{selector:.BookPageTitleSection__title h1}}",
+	"path": "06 - daily/_inbox/clippings"
 }

@@ -2,14 +2,12 @@
 	"schemaVersion": "0.1.0",
 	"name": "Product",
 	"behavior": "create",
-	"noteNameFormat": "{{title}}",
-	"path": "References",
 	"noteContentFormat": "{{description}}",
 	"properties": [
 		{
 			"name": "category",
 			"value": "[[Products]]",
-			"type": "text"
+			"type": "multitext"
 		},
 		{
 			"name": "created",
@@ -44,5 +42,7 @@
 	],
 	"triggers": [
 		"schema:@Product"
-	]
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "06 - daily/_inbox/clippings"
 }

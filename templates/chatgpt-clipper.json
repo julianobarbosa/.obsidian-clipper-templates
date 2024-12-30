@@ -1,14 +1,9 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "Wikipedia",
+	"name": "ChatGPT",
 	"behavior": "create",
-	"noteContentFormat": "{{selectorHtml:#mw-content-text|remove_html:(\".navbox,.printfooter,.side-box\")|markdown}}",
+	"noteContentFormat": "{{selectorHtml:article[data-testid*=\"conversation-turn\"]|replace:\"/<svg.*?svg>/g\":\"### ChatGPT\\:\"|join:\"\\n\\n\"|markdown|replace:(\"\\\\###\":\"###\", \"##### You said\": \"### You:\")}}\n",
 	"properties": [
-		{
-			"name": "category",
-			"value": "[[Clippings]]",
-			"type": "multitext"
-		},
 		{
 			"name": "title",
 			"value": "{{title}}",
@@ -21,8 +16,13 @@
 		},
 		{
 			"name": "author",
-			"value": "[[Wikipedia]]",
+			"value": "{{author|split:\\\", \\\"|wikilink|join}}",
 			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
 		},
 		{
 			"name": "created",
@@ -36,12 +36,13 @@
 		},
 		{
 			"name": "tags",
-			"value": "clippings, wikipedia",
+			"value": "chatgpt/conversation",
 			"type": "multitext"
 		}
 	],
 	"triggers": [
-		"/^https:\\/\\/[a-z]{2,3}\\.wikipedia\\.org\\/wiki\\/?$/"
+		"https://chatgpt.com/share",
+		"https://chatgpt.com/c"
 	],
 	"noteNameFormat": "{{title}}",
 	"path": "06 - daily/_inbox/clippings"
